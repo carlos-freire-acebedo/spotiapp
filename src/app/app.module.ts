@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,8 @@ import { CUSTOMROUTES } from './app.routes';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(CUSTOMROUTES, { useHash: true })
+    RouterModule.forRoot(CUSTOMROUTES, { useHash: true }),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
